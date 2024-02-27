@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 function App(){
  
@@ -63,6 +63,7 @@ function App(){
 {
   modal == true ? <Modal title = {title} 글제목 = {글제목} 글제목변경 ={글제목변경} color = {'skyblue'}></Modal> : null
 }
+
             </div>
     </div>
   )
@@ -86,6 +87,29 @@ function Modal(props){
     </div>
   )
 }
+/*
+class Modal2 extends React.Component{
+  constructor(props){
+    super(props)
+    this.state ={
+      name : "kim",
+      age : 20
+    }
+  }
+  render() {
+    return (
+      <div>
+        하이 {this.state.name}
+        <button onClick={() => {
+          this.setState({age: 21});
+        }}>
+
+        </button>
+      </div>
+    );
+  }  
+}
+*/
 
 export default App;
 
